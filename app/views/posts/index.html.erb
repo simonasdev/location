@@ -1,0 +1,11 @@
+<%= form_for @post, html:{id: 'form'} do |f| %>
+<%= f.hidden_field :lat, class: 'latitude' %>
+<%= f.hidden_field :long, class: 'longitude' %>
+<% end %>
+<div id="submit" style="font-size:120px; background-color:#f78e65;"> Get my loc</div>
+
+<% @posts.each do |p| %>
+<%= p.lat %>
+<%= p.long %>
+<br>
+<% end %>
